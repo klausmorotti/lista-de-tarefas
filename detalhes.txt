@@ -1,8 +1,5 @@
-FUNCIONALIDADES:
+FUNCIONALIDADES A ADICIONAR:
 
-- Input pra digitar tarefas
-- Botão pra adicionar tarefas
-- Área onde aparecerá as tarefas adicionadas
-- Opções de deletar, completar, desfazer e editar tarefa
+- Modal de confirmação de exclusão
+- Botão Limpar tudo
 - Salvar dados no LocalStorage
-- Trabalhar com datas igual Rigoberto
