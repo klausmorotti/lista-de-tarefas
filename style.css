@@ -1,0 +1,165 @@
+/* Fonte Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Variáveis */
+:root {
+    --color-black:#000;
+    --color-white:#D3D3D3;
+    --color-green:#00FF7F;
+    --color-purple-1:#C596D9;
+    --color-purple-2:#662B86;
+    --color-purple-3:#2A0859;
+    --color-purple-4:#0D0126;
+    --color-purple-5:#160340;
+}
+* {
+    margin:0;
+    padding:0;
+    border:0;
+    box-sizing:border-box;
+}
+body {
+    font-family:'Poppins';
+}
+main {
+    min-height:100vh;
+    height:auto;
+    padding:30px;
+    background-color: var(--color-purple-1);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+main h1 {
+    padding-top:50px;
+    font-size:40px;
+    font-weight:400;
+    letter-spacing:1px;
+    text-align:center;
+    color: var(--color-white);
+}
+main form {
+    max-width:500px;
+    width:100%;
+    margin-top:30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+main form input[type=search] {
+    width:100%;
+    height:50px;
+    margin-right:10px;
+    padding:15px;
+    font-family:'Poppins';
+    font-size:15px;
+    border:1px solid var(--color-white);
+    border-radius:3px;
+    outline:0;
+    transition:all ease .5s;
+}
+main form input[type=search]::placeholder {
+    font-family:'Poppins';
+    font-size:15px;
+}
+main form input[type=submit] {
+    width:150px;
+    height:50px;
+    font-family:'Poppins';
+    font-size:15px;
+    border-radius:3px;
+    color: var(--color-white);
+    background-color: var(--color-purple-3);
+    cursor:pointer;
+}
+main .areaTasks {
+    max-width:1000px;
+    width:100%;
+    margin-top:50px;
+}
+main .areaTasks h3 {
+    font-size:30px;
+    font-weight:500;
+    color: var(--color-white);
+}
+main .areaTasks .tasks {
+    width:100%;
+    height:auto;
+    padding:20px;
+    background-color: var(--color-purple-2);
+    border-radius:10px;
+    display:flex;
+    flex-direction:column;
+}
+.modelTask {
+    display:none;
+}
+.task {
+    width:100%;
+    margin-bottom:20px;
+    padding:20px;
+    border:1px solid var(--color-purple-1);
+    border-radius:5px;
+    display:flex;
+    justify-content:space-between;
+} 
+.taskComplete {
+    border:1px solid var(--color-green);
+    color:var(--color-green);
+    background-color:var(--color-purple-1);
+    text-decoration:line-through;
+    transition:all ease .5s;
+}
+.task p {
+    color: var(--color-purple-1);
+}
+.task .areaCta {
+    display:flex;
+}
+.task .areaCta img {
+    max-width:30px;
+    cursor:pointer;
+}
+.task .areaCta img:first-child {
+    margin-right:10px;
+}
+/* Animação quando input esta vazio */
+.animationInput {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+}
+
+/* Responsivity */
+@media only screen and (max-width:450px) {
+    main h1 {
+        font-size:30px;
+    }
+    main .areaTasks h3 {
+        font-size:25px;
+    }
+    main form input[type=search] {
+        padding:15px 10px;
+    }
+    main form input[type=search]::placeholder {
+        font-size:12px;
+    }
+}
