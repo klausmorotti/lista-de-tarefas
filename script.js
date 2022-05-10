@@ -17,14 +17,14 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     let inputValue = inputText.value;
 
-    if( inputValue == '' ) {
+    if (inputValue == '') {
         inputText.style.border = '1px solid #FF0000';
         inputText.classList.add('animationInput');
         setTimeout(() => {
             inputText.classList.remove('animationInput');
         }, 1000)
     } else {
-        
+
         inputText.style.border = '1px solid var(--color-white)';
 
         let task = document.querySelector('.modelTask .task').cloneNode(true);
@@ -47,7 +47,7 @@ form.addEventListener('submit', (e) => {
 
 // Função que verifica se há tasks, se houver a estrutura aparece, senao, nao aparece
 function verifyTasks() {
-    if( document.querySelectorAll('.task').length > 1 ) {
+    if (document.querySelectorAll('.task').length > 1) {
         document.querySelector('.tasks').style.opacity = 1;
     } else {
         document.querySelector('.tasks').style.opacity = 0;
@@ -57,33 +57,20 @@ function verifyTasks() {
 // Função que adiciona um clique para todos os botões de remover ou finalizar tarefa
 function addClick(deleteTask, completeTask) {
     deleteTask.forEach((item) => {
-        item.addEventListener('click', () => {
-            document.querySelector('.modalExclude').style.opacity = 1;
-            document.querySelector('.modalExclude').style.zIndex = 99;
-
-            document.querySelector('.btnYes').addEventListener('click', (e) => {
-                e.preventDefault();
-                removeTask(item);
-                verifyTasks();
-                document.querySelector('.modalExclude').style.opacity = 0;
-                document.querySelector('.modalExclude').style.zIndex = -1;
-            })
-            document.querySelector('.btnNo').addEventListener('click', (e) => {
-                e.preventDefault();
-                document.querySelector('.modalExclude').style.opacity = 0;
-                document.querySelector('.modalExclude').style.zIndex = -1;
-            })
-           
+        item.addEventListener('click', () => {  
+            removeTask(item);
+            verifyTasks();
         })
     })
+
 
     completeTask.forEach((item) => {
         item.addEventListener('click', () => {
             finishTask(item);
         })
     })
-    
 }
+
 
 // Removendo o item clicado acessando o elemento pai com nome TASK
 let removeTask = (item) => {
@@ -93,7 +80,7 @@ let removeTask = (item) => {
 
 let finishTask = (item) => {
     let taskItem = item.closest('.task');
-    if( taskItem.classList.contains('taskComplete') ) {
+    if (taskItem.classList.contains('taskComplete')) {
         taskItem.classList.remove('taskComplete');
         taskItem.querySelector('p').style.color = 'var(--color-purple-1)';
     } else {
@@ -101,6 +88,5 @@ let finishTask = (item) => {
         taskItem.querySelector('p').style.color = 'var(--color-black)';
     }
 }
-
 
 
