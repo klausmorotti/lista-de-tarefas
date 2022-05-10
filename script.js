@@ -11,6 +11,7 @@ let inputSubmit = document.querySelector('form input[type=submit]');
 
 let completeTask;
 let deleteTask;
+let arrayTasks = [];
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -23,6 +24,7 @@ form.addEventListener('submit', (e) => {
             inputText.classList.remove('animationInput');
         }, 1000)
     } else {
+        
         inputText.style.border = '1px solid var(--color-white)';
 
         let task = document.querySelector('.modelTask .task').cloneNode(true);
@@ -33,7 +35,9 @@ form.addEventListener('submit', (e) => {
 
         inputText.value = '';
 
-        
+        verifyTasks();
+
+
         // Pegando todos botões de remover e finalizar tarefa a cada tarefa nova que adiciono
         deleteTask = task.querySelectorAll('.deleteTask');
         completeTask = task.querySelectorAll('.completeTask');
@@ -41,11 +45,35 @@ form.addEventListener('submit', (e) => {
     }
 })
 
+// Função que verifica se há tasks, se houver a estrutura aparece, senao, nao aparece
+function verifyTasks() {
+    if( document.querySelectorAll('.task').length > 1 ) {
+        document.querySelector('.tasks').style.opacity = 1;
+    } else {
+        document.querySelector('.tasks').style.opacity = 0;
+    }
+}
+
 // Função que adiciona um clique para todos os botões de remover ou finalizar tarefa
 function addClick(deleteTask, completeTask) {
     deleteTask.forEach((item) => {
         item.addEventListener('click', () => {
-            removeTask(item);
+            document.querySelector('.modalExclude').style.opacity = 1;
+            document.querySelector('.modalExclude').style.zIndex = 99;
+
+            document.querySelector('.btnYes').addEventListener('click', (e) => {
+                e.preventDefault();
+                removeTask(item);
+                verifyTasks();
+                document.querySelector('.modalExclude').style.opacity = 0;
+                document.querySelector('.modalExclude').style.zIndex = -1;
+            })
+            document.querySelector('.btnNo').addEventListener('click', (e) => {
+                e.preventDefault();
+                document.querySelector('.modalExclude').style.opacity = 0;
+                document.querySelector('.modalExclude').style.zIndex = -1;
+            })
+           
         })
     })
 
@@ -73,5 +101,6 @@ let finishTask = (item) => {
         taskItem.querySelector('p').style.color = 'var(--color-black)';
     }
 }
+
 
 

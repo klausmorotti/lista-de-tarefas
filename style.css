@@ -17,9 +17,66 @@
     padding:0;
     border:0;
     box-sizing:border-box;
-}
-body {
     font-family:'Poppins';
+}
+.modalExclude {
+    opacity:0;
+    z-index:-1;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    height:100vh;
+    background-color:rgba(255,255,255, 0.6);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:10px;
+    transition:all ease 0.5s;
+}
+.modalExclude .exclude {
+    padding:30px;
+    max-width:600px;
+    width:100%;
+    height:auto;
+    border-radius:10px;
+    background-color:#F5F5F5;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.modalExclude .exclude img {
+    max-width:80px;
+    margin-top:-60px;
+}
+.modalExclude .exclude h3 {
+    margin-top:25px;
+    font-size:18px;
+    font-weight:500;
+    letter-spacing:1px;
+    text-align:center;
+}
+.modalExclude .exclude .areaCta {
+    margin-top:50px;
+    height:auto;
+}
+.modalExclude .exclude .areaCta .btn {
+    text-decoration:none;
+    max-width:70px;
+    height:30px;
+    font-size:15px;
+    font-weight:500;
+    letter-spacing:1px;
+    padding:10px 30px;
+    border-radius:10px;
+    color: var(--color-black);
+    text-align:center;
+    cursor:pointer;
+}
+.modalExclude .exclude .areaCta .btnYes {
+    background-color: #FF3F5B;
+    color:#FFF;
+    margin-right:20px;
 }
 main {
     min-height:100vh;
@@ -83,6 +140,7 @@ main .areaTasks h3 {
     color: var(--color-white);
 }
 main .areaTasks .tasks {
+    opacity:0;
     width:100%;
     height:auto;
     padding:20px;
@@ -103,6 +161,9 @@ main .areaTasks .tasks {
     display:flex;
     justify-content:space-between;
 } 
+.task:last-child {
+    margin-bottom:0;
+}
 .taskComplete {
     border:1px solid var(--color-green);
     color:var(--color-green);
@@ -160,6 +221,20 @@ main .areaTasks .tasks {
         padding:15px 10px;
     }
     main form input[type=search]::placeholder {
+        font-size:12px;
+    }
+    .modalExclude .exclude {
+        padding:20px;
+    }
+    .modalExclude .exclude img {
+        max-width:60px;
+    }
+    .modalExclude .exclude h3 {
+        font-size:15px;
+    }
+    .modalExclude .exclude .areaCta .btn {
+        padding:10px 20px;
+        width:50px;
         font-size:12px;
     }
 }
