@@ -9,11 +9,11 @@
 
 Quem hoje em dia não gosta de uma boa gestão de tempo e organização? rsrs
 
-Justamente pra isso o projeto Lista de tarefas foi criado, um projeto dinâmico e objetivo com funções de registrar, completar e excluir tarefas diárias
+Justamente pra isso o projeto Lista de tarefas foi criado, um projeto dinâmico e objetivo com funções de registrar, completar e excluir tarefas diárias.
 
 O projeto contém as seguintes funções:
 
-* Registrar tarefas 
+* Registrar tarefas
 * Completar tarefas
 * Excluir tarefas
 
@@ -25,10 +25,11 @@ O site tem no total 1 página, sendo ela
 
 ## 🎯 Etapas do projeto
 
-✔️ Desenvolvendo a interface do projeto </br>
-✔️ Criando a responsividade do projeto </br>
-✔️ Planejamento da lógica utilizada para as principais funções citadas acima </br>
-✔️ Implementação da lógica desenvolvida para as funções principais utilizando JavaScript </br>
+✔️ Desenvolvendo a interface do projeto. </br>
+✔️ Criando a responsividade do projeto. </br>
+✔️ Planejamento da lógica utilizada para as principais funções citadas acima. </br>
+✔️ Implementação da lógica desenvolvida para as funções principais utilizando JavaScript. </br>
+✔️ Projeto finalizado. </br>
 
 ## 🚀 Tecnologias
 * <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">HTML</a>
