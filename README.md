@@ -29,7 +29,7 @@ O site tem no total 1 página, sendo ela
 ✔️ Criando a responsividade do projeto. </br>
 ✔️ Planejamento da lógica utilizada para as principais funções citadas acima. </br>
 ✔️ Implementação da lógica desenvolvida para as funções principais utilizando JavaScript. </br>
-✔️ Projeto finalizado. </br>
+✔️ Projeto finalizado.
 
 ## 🚀 Tecnologias
 * <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">HTML</a>
