@@ -53,3 +53,5 @@ O site tem no total 1 página, sendo ela
 ## 📝 Licença
 
 Este projeto está sob licença. Consulte o arquivo <a href="https://github.com/klausmorotti/lista-de-tarefas/blob/master/LICENSE">LICENSE</a> para obter mais detalhes.
+
+<a href="#top">Volte para o topo</a>
