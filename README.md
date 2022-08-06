@@ -1,4 +1,9 @@
-# LISTA DE TAREFAS
+<h1 align="center">TO DO LIST</h1>
+
+<img src="assets/images/todolist-gif.gif" alt="Video Projeto" width="100%" height="500">
+
+> 🔎 Lista de tarefas dinâmica e simples de usar, adicione, exclua e complete suas tarefas com facilidade. <br>
+🗔 Confira a aplicação: https://klausmorotti.github.io/lista-de-tarefas/ <br>
 
 ## 📄 Explicação
 
@@ -12,6 +17,11 @@ O projeto contém as seguintes funções:
 * Completar tarefas
 * Excluir tarefas
 
+## 📁 Páginas
+
+O site tem no total 1 página, sendo ela
+
+- **Página principal:** A área principal onde conseguimos utilizar a página, melhorando nossa performance no dia a dia.
 
 ## 🎯 Etapas do projeto
 
